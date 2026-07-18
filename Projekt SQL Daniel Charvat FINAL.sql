@@ -220,6 +220,7 @@ GROUP BY
 	average_price;
 
 -- procentualni zmena
+
 WITH cenove_zmeny AS (
 SELECT 
 	YEAR,
@@ -254,6 +255,7 @@ ORDER BY procentualni_zmena DESC;
 
 -- musim si udelat rocni prumer vsech mezd a vsech potravin
 -- aktualni rok a minuly rok vedle sebe
+
 WITH rocni_prumery AS(
 SELECT
 	YEAR,
@@ -289,6 +291,9 @@ ORDER BY rozdil_v_procentech DESC;
 -- 5. Ma vyska HDP vliv na zmeny ve mzdach a cenach potravin?
 -- Neboli, pokud HDP vzroste vyrazneji v jednom roce, projevi se to na cenach potravin ci mzdach
 -- ve stejnem nebo nasledujicim roce vyraznejsim rustem?
+
+-- napred udelam rocni prumery cen a mezd a pomoci CTE pak zobrazim jeste rust v procentech u cen, mezd a nakonec i u hdp
+-- to musim udelat treti dotaz protoze hdp mam v jiny tabulce
 
 SELECT
 		YEAR,
