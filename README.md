@@ -12,7 +12,8 @@ Jelikoz jsem pouzival funkci LAG, pro vypocet mezirocniho rustu chybi referencni
 Kvuli tomu SQL generuje pro prvni rok hodnotu NULL. Tyhle radky jsem tak cilene vyfiltroval pryc (pomoci WHERE IS NOT NULL)
 Dale zdroje pro data mezd i cen nezacinaly ve stejne obdobi, primarni tabulka proto spojuje to obdobi, pro ktere existuje dostatecny prunik dat.
 
-
+Pri matematickych vypoctech obcas narazila databaze na chybu, protoze byl vysledek v jinym datovym formatu, nez jaky vyzadovala funkce po zaokrouhleni.
+Pouzil jsem tim padem funkci CAST kterou jsem si vyhledal na internetu, ktery pak prevedl data na typ NUMERIC. Z tohohle formatu pak sly data zaokrouhlit.
 
 
 /*
