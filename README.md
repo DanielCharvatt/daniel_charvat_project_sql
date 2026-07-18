@@ -13,6 +13,8 @@ Kvuli tomu SQL generuje pro prvni rok hodnotu NULL. Tyhle radky jsem tak cilene 
 Dale zdroje pro data mezd i cen nezacinaly ve stejne obdobi, primarni tabulka proto spojuje to obdobi, pro ktere existuje dostatecny prunik dat.
 
 
+
+
 /*
  * Vyzkumne otazky
 */
